@@ -9,8 +9,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    gap: 40%;
 }
 
 .menu__left {
@@ -25,22 +23,38 @@ body {
 
 .signboard {
     background: #F1E4E6;
+    display: flex;
+    justify-content: center;
+}
+
+.signboard__container {
+    width: 1140px;
+    display: flex;
 }
 
 .signboard__left {
-    position: relative;
-    left: 360px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signboard__right {
     display: flex;
-    height: 93px;
-    width: 415px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
     gap: 16px;
+}
 
+.signboard__img {
     position: relative;
-    top: 370px;
-    left: 1200px;
+    right: 130px;
+}
+
+.stick {
+    height: 93px;
 }
 
 .signboard__right-text {
@@ -244,7 +258,7 @@ body {
     margin: 12px 0 18px 0;
 
     color: #5D5D5D;
-    font-family: Lato;
+    font-family: Lato, serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -271,6 +285,8 @@ body {
     justify-content: center;
     align-items: center;
     justify-self: center;
+
+    cursor: pointer;
 }
 
 .featured__button-text {
