@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+}
+
+.menu {
+    background: #222222;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 40%;
+}
+
+.menu__left {
+    display: flex;
+    gap: 41px;
+}
+
+.menu__left-search {
+    position: relative;
+    top: 5px;
+}
+
+.signboard {
+    background: #F1E4E6;
+}
+
+.signboard__left {
+    position: relative;
+    left: 360px;
+}
+
+.signboard__right {
+    display: flex;
+    height: 93px;
+    width: 415px;
+    gap: 16px;
+
+    position: relative;
+    top: 370px;
+    left: 1200px;
+}
+
+.signboard__right-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.signboard__right-text-bold {
+    color: #222;
+    font-family: Lato, serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.signboard__right-text-regular {
+    color: #222;
+    font-family: Lato, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.signboard__right-text-pink {
+    color: #F16D7F;
+    font-family: Lato, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container {
+    padding: 65px 230px 60px 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog {
+    display: grid;
+    gap: 30px;
+    width: 1140px;
+
+    grid-template-areas:
+        "A C D"
+        "B B B";
+}
+
+.catalog__square-1 {
+    grid-area: A;
+    width: 360px;
+    height: 260px;
+    background: black;
+}
+
+.catalog__square-2 {
+    grid-area: C;
+    width: 360px;
+    height: 260px;
+    background: black;
+}
+.catalog__square-3 {
+    grid-area: D;
+    width: 360px;
+    height: 260px;
+    background: black;
+}
+
+.catalog__rectangle {
+    grid-area: B;
+    width: 1140px;
+    height: 180px;
+    background: black;
+}
+
+.catalog__rectangle-text {
+    top: -110px;
+}
+
+.catalog__image {
+    opacity: 0.5;
+}
+
+.catalog__text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    bottom: 160px;
+}
+
+.catalog__text-first-line {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.catalog__text-second-line {
+    color: #F16D7F;
+    font-family: Lato, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.catalog__square-first-line {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featured {
+    margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 48px;
+}
+
+.featured__text-headline {
+    color: #222;
+    font-family: Lato, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featured__text-text {
+    color: #9F9F9F;
+    font-family: Lato, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featured__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.featured__cards-card {
+    background: #F8F8F8;
+    width: 360px;
+    height: 586px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.featured__cards-card-image {
+    background: #F7E4E2;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured__cards-card-text {
+    padding: 24px 29px 20px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.featured__cards-card-name {
+    color: #000;
+    font-family: Lato, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featured__cards-card-description {
+    margin: 12px 0 18px 0;
+
+    color: #5D5D5D;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.featured__cards-card-price {
+    color: #F16D7F;
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featured__button {
+    margin-top: 48px;
+
+    width: 212px;
+    height: 48px;
+    border: 1px red solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.featured__button-text {
+    color: #F26376;
+    font-family: Lato, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
