@@ -1,0 +1,53 @@
+@media (max-width: 1024px) {
+    .menu {
+        gap: 55%;
+    }
+    .signboard__img {
+        left: -35px;
+    }
+    .catalog {
+        width: 750px;
+        column-gap: 19px;
+        row-gap: 19px;
+    }
+    .catalog__square-1 {
+        width: 231px;
+        height: 167px;
+    }
+    .catalog__square-2 {
+        width: 231px;
+        height: 167px;
+    }
+    .catalog__square-3 {
+        width: 231px;
+        height: 167px;
+    }
+    .catalog__rectangle {
+        width: 744px;
+        height: 116px;
+    }
+    .catalog__image {
+        width: 231px;
+        height: 167px;
+    }
+    .catalog__text {
+        bottom: 110px;
+    }
+    .catalog__rectangle-image {
+        width: 744px;
+        height: 116px;
+    }
+    .catalog__rectangle-text {
+        top: -85px;
+    }
+    .featured__cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

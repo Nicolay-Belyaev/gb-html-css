@@ -98,7 +98,8 @@ body {
 
 .catalog {
     display: grid;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
     width: 1140px;
 
     grid-template-areas:
@@ -140,6 +141,8 @@ body {
 .catalog__image {
     opacity: 0.5;
 }
+
+.catalog__rectangle-image {}
 
 .catalog__text {
     display: flex;
