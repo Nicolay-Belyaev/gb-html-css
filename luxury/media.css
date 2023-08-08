@@ -1,6 +1,15 @@
 @media (max-width: 1024px) {
-    .menu {
-        gap: 55%;
+    .container {
+        padding: 16px 230px 16px 230px;
+    }
+    .signboard__right-text-bold {
+        font-size: 44px;
+    }
+    .signboard__right-text-regular {
+        font-size: 24px;
+    }
+    .signboard__right-text-pink {
+        font-size: 24px;
     }
     .signboard__img {
         left: -35px;
@@ -49,5 +58,79 @@
 }
 
 @media (max-width: 767px) {
+    .signboard {
+        height: 363px;
+    }
 
+    .signboard__left {
+        display: none;
+    }
+    .signboard__right {
+        width: 100%;
+    }
+
+    .signboard__right-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signboard__right-text-bold {
+        font-size: 38px;
+    }
+
+    .signboard__right-text-regular {
+        font-size: 20px;
+    }
+    .signboard__right-text-pink {
+        font-size: 20px;
+    }
+    .container {
+        padding: 16px 0px 16px 0px;
+    }
+    .catalog {
+        width: 343px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .catalog__square-1 {
+        width: 343px;
+        height: 247px;
+    }
+    .catalog__square-2 {
+        width: 343px;
+        height: 247px;
+    }
+    .catalog__square-3 {
+        width: 343px;
+        height: 247px;
+    }
+    .catalog__image {
+        width: 343px;
+        height: 247px;
+    }
+    .catalog__text {
+        bottom: 150px;
+    }
+    .catalog__rectangle {
+        width: 343px;
+        height: 111px;
+
+        position: relative;
+        overflow: hidden;
+    }
+    .catalog__rectangle-image {
+        width: 744px;
+        height: 111px;
+
+        position: relative;
+        right: 207px;
+    }
+    .featured__cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
 }
