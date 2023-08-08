@@ -241,6 +241,42 @@ body {
     justify-content: center;
 }
 
+.featured__cards-card_hover {
+    width: 360px;
+    height: 420px;
+
+    background: rgba(58, 56, 56, 0.86);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+}
+
+.featured__cards-card_hover:hover {
+    opacity: 100;
+}
+
+.featured__cards-card_hover-button {
+    width: 139px;
+    height: 44px;
+    border: 1px white solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+.hover-button-text {
+    color: #FFF;
+    font-family: Lato, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .featured__cards-card-text {
     padding: 24px 29px 20px 18px;
 
