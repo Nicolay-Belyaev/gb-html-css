@@ -73,7 +73,7 @@
         right: 245px;
     }
     .signboard__right-text {
-        right: 0px;
+        right: 0;
     }
     .signboard__right-text-bold {
         font-size: 38px;
@@ -86,7 +86,7 @@
         font-size: 20px;
     }
     .container {
-        padding: 16px 0px 16px 0px;
+        padding: 16px 0 16px 0;
     }
     .catalog {
         width: 320px;
@@ -155,5 +155,11 @@
     .featured__image {
         width: 320px;
         height: 373px;
+    }
+    #cart {
+        display: none;
+    }
+    #profile {
+        display: none;
     }
 }

@@ -12,7 +12,10 @@ body {
 
     padding: 0 25px 0 25px;
 }
-
+.menu__right {
+    display: flex;
+    gap: 2rem;
+}
 .menu__left {
     display: flex;
     gap: 41px;
