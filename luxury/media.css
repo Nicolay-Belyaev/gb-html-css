@@ -14,6 +14,10 @@
     .signboard__img {
         left: -35px;
     }
+    .stick {
+        height: 83px;
+        right: 300px;
+    }
     .catalog {
         width: 750px;
         column-gap: 19px;
@@ -61,19 +65,16 @@
     .signboard {
         height: 363px;
     }
-
-    .signboard__left {
+    .signboard__img {
         display: none;
     }
-    .signboard__right {
-        width: 100%;
+    .stick {
+        height: 73px;
+        right: 245px;
     }
-
     .signboard__right-text {
-        display: flex;
-        flex-direction: column;
+        right: 0px;
     }
-
     .signboard__right-text-bold {
         font-size: 38px;
     }
@@ -88,33 +89,33 @@
         padding: 16px 0px 16px 0px;
     }
     .catalog {
-        width: 343px;
+        width: 320px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     .catalog__square-1 {
-        width: 343px;
+        width: 320px;
         height: 247px;
     }
     .catalog__square-2 {
-        width: 343px;
+        width: 320px;
         height: 247px;
     }
     .catalog__square-3 {
-        width: 343px;
+        width: 320px;
         height: 247px;
     }
     .catalog__image {
-        width: 343px;
+        width: 320px;
         height: 247px;
     }
     .catalog__text {
         bottom: 150px;
     }
     .catalog__rectangle {
-        width: 343px;
+        width: 320px;
         height: 111px;
 
         position: relative;
@@ -132,5 +133,27 @@
         grid-template-rows: repeat(6, 1fr);
         grid-column-gap: 16px;
         grid-row-gap: 16px;
+    }
+
+    .featured__cards-card {
+        background: #F8F8F8;
+        width: 320px;
+        height: 550px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featured__cards-card_hover {
+        width: 320px;
+        height: 373px;
+    }
+    .featured__cards-card-image{
+        width: 320px;
+        height: 373px;
+    }
+    .featured__image {
+        width: 320px;
+        height: 373px;
     }
 }
