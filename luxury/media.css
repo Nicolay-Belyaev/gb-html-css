@@ -59,6 +59,17 @@
         grid-column-gap: 16px;
         grid-row-gap: 16px;
     }
+    .footer__features {
+        flex-direction: column;
+        height: 610px;
+    }
+    .footer__subscribe {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer__copyrights {
+        gap: 540px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -161,5 +172,31 @@
     }
     #profile {
         display: none;
+    }
+    .footer__features {
+        padding: 0 0 0 0;
+    }
+
+    .footer__copyrights {
+        height: 143px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 0;
+    }
+    .footer__copyrights-text {
+        width: 250px;
+        position: relative;
+        top:65px
+    }
+    .footer__copyrights-icons {
+        position: relative;
+        bottom: 20px;
+    }
+    .footer__subscribe-right {
+        scale: 0.9;
+    }
+    .footer__subscribe-left {
+        scale: 0.9;
     }
 }
