@@ -1,0 +1,13 @@
+@mixin fontSets($color, $family, $weight, $size) {
+  color: $color;
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin gridSets($gridArea, $wight, $height) {
+  grid-area: $gridArea;
+  width: $wight;
+  height: $height;
+  background: black;
+}
