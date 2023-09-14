@@ -1,0 +1,55 @@
+@import "vars";
+@import "mixins";
+
+.heading {
+  height: 148px;
+  background: $secondPinkColor;
+  display: flex;
+  justify-content: center;
+
+    &__container {
+      width: $siteWight;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .arrivals {
+      @include fontSets($mainPinkColor, $mainFont, 400, 24px);
+    }
+
+    .selectors {
+      @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+      &__pink {
+        @include fontSets($mainPinkColor, $mainFont, 700, 14px);
+      }
+    }
+}
+
+.filter-sort {
+  width: $siteWight;
+  margin: 0 auto;
+  height: 132px;
+  position: relative;
+
+  .filter {
+    &__details {
+      padding: 13px 16px 13px;
+      width: 360px;
+      position: absolute;
+      top: 39px;
+
+      &-summary {
+        display: flex;
+        align-content: center;
+        gap: 11px;
+        & svg {
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+  }
+}
+
+
+

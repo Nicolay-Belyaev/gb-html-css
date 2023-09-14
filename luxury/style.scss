@@ -1,5 +1,6 @@
 @import "vars";
 @import "mixins";
+@import "catalog";
 
 body {
   margin: 0;
@@ -9,12 +10,14 @@ body {
 .menu {
   background: $mainBlackColor;
   height: 75px;
+  @include flexCenter;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 370px 0 370px;
-
+    &__container {
+      width: 1140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &__right {
       display: flex;
       gap: 2rem;
@@ -28,6 +31,7 @@ body {
       top: 5px;
     }
 }
+
 
 .signboard {
   background: #F1E4E6;
@@ -72,6 +76,7 @@ body {
 }
 
 .catalog {
+  margin-bottom: 96px;
   display: grid;
   column-gap: 30px;
   row-gap: 30px;
@@ -101,9 +106,9 @@ body {
     }
     &__text {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
 
       position: relative;
       bottom: 160px;
@@ -116,18 +121,16 @@ body {
     }
 }
 
-.featured {
-  margin-top: 96px;
-
+.products {
   display: flex;
   flex-direction: column;
   align-items: center;
 
     &__text {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
 
       margin-bottom: 48px;
     }
@@ -154,12 +157,9 @@ body {
           flex-direction: column;
         }
         &-card-image {
+          @include flexCenter;
           background: #F7E4E2;
           height: 420px;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
         &-card_hover {
           width: 360px;
@@ -177,12 +177,10 @@ body {
           opacity: 100;
         }
         &-card_hover-button {
+          @include flexCenter;
           width: 139px;
           height: 44px;
           border: 1px white solid;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           gap: 11px;
         }
         &-card-text {
@@ -206,20 +204,16 @@ body {
     @include fontSets(white, $mainFont, 400, 14px);
   }
   &__button {
+    @include flexCenter;
+    @include fontSets($mainPinkColor, $mainFont, 400, 16px);
+
     margin-top: 48px;
 
     width: 212px;
     height: 48px;
     border: 1px red solid;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-
     cursor: pointer;
-
-    @include fontSets($mainPinkColor, $mainFont, 400, 16px);
   }
 
   &__button:hover {
@@ -239,9 +233,7 @@ body {
 
 .footer {
   &__features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
 
     padding: 0 370px 0 370px;
     background: black;
@@ -253,12 +245,10 @@ body {
     height: 35px;
   }
   &-icon {
+    @include flexCenter;
     width: 31px;
     height: 32px;
     background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   &-icon:hover {
     background: $mainPinkColor;
@@ -277,10 +267,8 @@ body {
     width: 310px;
   }
   &__subscribe {
+    @include flexCenter;
     height: 448px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 224px;
     position: relative;
 
@@ -311,14 +299,11 @@ body {
       }
   }
   &__copyrights {
+    @include flexCenter;
     height: 79px;
     background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 600px;
     padding: 0 10px 0 10px;
-
       &-text {
         @include fontSets(white, $mainFont, 400, 20px);
         width: 332px;
@@ -359,8 +344,7 @@ body {
     left: 24px;
   }
   &__right-form {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
     margin-top: 38px;
   }
   &__input:focus {
