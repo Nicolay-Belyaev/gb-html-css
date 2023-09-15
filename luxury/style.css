@@ -147,6 +147,8 @@ summary::-webkit-details-marker {
 }
 .paginator svg {
   padding: 0 15px 0 15px;
+  position: relative;
+  top: -1px;
 }
 .paginator__selector {
   width: 283px;
@@ -155,7 +157,7 @@ summary::-webkit-details-marker {
   color: #8c8c8c;
   font-family: Lato, serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;

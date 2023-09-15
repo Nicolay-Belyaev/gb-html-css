@@ -138,12 +138,14 @@ summary::-webkit-details-marker {
 
     & svg {
       padding: 0 15px 0 15px;
+      position: relative;
+      top: -1px;
     }
     &__selector {
       width: 283px;
       height: 43px;
       border: 1px solid $mainGreyColor;
-      @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+      @include fontSets($mainGreyColor, $mainFont, 300, 16px);
       @include flexCenter;
       gap: 15px;
     }
