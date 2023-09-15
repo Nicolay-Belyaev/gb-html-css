@@ -1,6 +1,14 @@
 @import "vars";
 @import "mixins";
 
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .heading {
   height: 148px;
   background: $secondPinkColor;
@@ -30,13 +38,62 @@
   margin: 0 auto;
   height: 132px;
   position: relative;
+  display: flex;
+  justify-content: center;
 
   .filter {
+    &__heading {
+      @include fontSets($mainBlackColor, $mainFont, 400, 14px)
+    }
+    &__subheading {
+      @include fontSets($mainGreyColor, $mainFont, 400, 14px);
+      border-bottom: 1px solid #EBEBEB;
+      border-left: 5px solid $mainPinkColor;
+      padding: 8px 11px 11px 11px;
+    }
+    &__item {
+      &[open] .filter__subheading{
+        color: $mainPinkColor;
+      }
+    }
+    &__content {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    &__links-box {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin: 24px 0 6px 17px;
+    }
+    &__link{
+      text-decoration: none;
+      @include fontSets($mainGreyColor, $mainFont, 400, 14px)
+    }
     &__details {
       padding: 13px 16px 13px;
       width: 360px;
       position: absolute;
-      top: 39px;
+      top: 44px;
+      left: -17px;
+      box-sizing: border-box;
+
+      z-index: 1;
+
+      &[open] {
+        width: 360px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      }
+
+      &[open] .filter__heading{
+        color: $mainPinkColor;
+      }
+      &[open] path {
+        fill: $mainPinkColor;
+      }
 
       &-summary {
         display: flex;
@@ -49,7 +106,46 @@
       }
     }
   }
+
+  .sort {
+    @include fontSets($mainGreyColor, $mainFont, 400, 14px);
+    @include flexCenter;
+    display: flex;
+    gap: 28px;
+
+    &__size {
+      position: relative;
+      &-sizes {
+        width: 79px;
+        position: absolute;
+        top: 25px;
+        left: -18px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 9px 0 12px 9px;
+        gap: 9px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+      }
+    }
+  }
 }
 
+.paginator {
+  height: 188px;
+  @include flexCenter;
 
+    & svg {
+      padding: 0 15px 0 15px;
+    }
+    &__selector {
+      width: 283px;
+      height: 43px;
+      border: 1px solid $mainGreyColor;
+      @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+      @include flexCenter;
+      gap: 15px;
+    }
+}
 

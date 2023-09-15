@@ -1,3 +1,11 @@
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .heading {
   height: 148px;
   background: #F8F3F4;
@@ -34,12 +42,65 @@
   margin: 0 auto;
   height: 132px;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+.filter-sort .filter__heading {
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.filter-sort .filter__subheading {
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 400;
+  font-size: 14px;
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 5px solid #F16D7F;
+  padding: 8px 11px 11px 11px;
+}
+.filter-sort .filter__item[open] .filter__subheading {
+  color: #F16D7F;
+}
+.filter-sort .filter__content {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.filter-sort .filter__links-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 24px 0 6px 17px;
+}
+.filter-sort .filter__link {
+  text-decoration: none;
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 .filter-sort .filter__details {
   padding: 13px 16px 13px;
   width: 360px;
   position: absolute;
-  top: 39px;
+  top: 44px;
+  left: -17px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.filter-sort .filter__details[open] {
+  width: 360px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter-sort .filter__details[open] .filter__heading {
+  color: #F16D7F;
+}
+.filter-sort .filter__details[open] path {
+  fill: #F16D7F;
 }
 .filter-sort .filter__details-summary {
   display: flex;
@@ -49,6 +110,56 @@
 .filter-sort .filter__details-summary svg {
   position: relative;
   top: 3px;
+}
+.filter-sort .sort {
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 28px;
+}
+.filter-sort .sort__size {
+  position: relative;
+}
+.filter-sort .sort__size-sizes {
+  width: 79px;
+  position: absolute;
+  top: 25px;
+  left: -18px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 9px 0 12px 9px;
+  gap: 9px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+
+.paginator {
+  height: 188px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginator svg {
+  padding: 0 15px 0 15px;
+}
+.paginator__selector {
+  width: 283px;
+  height: 43px;
+  border: 1px solid #8c8c8c;
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 body {
