@@ -1,0 +1,68 @@
+@import 'vars';
+@import "mixins";
+
+.product {
+  height: 777px;
+  background: #F7F7F7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .arrow-box {
+    height: 47px;
+    width: 47px;
+    background: $mainGreyColor;
+    @include flexCenter;
+    :hover path{
+      fill: $mainPinkColor;
+    }
+  }
+}
+
+
+.description {
+  width: $siteWight;
+  height: 601px;
+  background: white;
+  position: relative;
+  bottom: 60px;
+  border: 1px solid #EAEAEA;
+  margin: 0 auto 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 64px;
+
+  &__headline {
+    @include fontSets($mainPinkColor, $mainFont, 300, 14px);
+    margin-bottom: 12px;
+  }
+  &__secondline {
+    @include fontSets($mainGreyColor, $mainFont, 300, 18px);
+    margin-top: 12px;
+    margin-bottom: 48px;
+  }
+  &__maintext {
+    @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+    margin-bottom: 32px;
+    width: 555px;
+  }
+  &__price {
+    @include fontSets($mainPinkColor, $mainFont, 300, 24px);
+    margin-bottom: 65px;
+  }
+}
+
+#singleLine {
+  grid-template-rows: repeat(1, 1fr);
+  margin-bottom: 128px;
+}
+
+#product__sort {
+  margin-top: 72px;
+  display: flex;
+  gap: 23px;
+  @include fontSets(#6F6E6E, $mainFont, 400, 14px);
+}

@@ -1,6 +1,7 @@
 @import "vars";
 @import "mixins";
 @import "catalog";
+@import "product";
 
 body {
   margin: 0;
@@ -31,7 +32,6 @@ body {
       top: 5px;
     }
 }
-
 
 .signboard {
   background: #F1E4E6;
