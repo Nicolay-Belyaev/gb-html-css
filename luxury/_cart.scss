@@ -1,0 +1,161 @@
+@import "mixins";
+@import "vars";
+
+$cardWight: 652px;
+
+.address {
+  @include fontSets($mainBlackColor, $mainFont, 300, 16px);
+}
+
+.solid {
+  border-top: 3px solid #E2E2E2;
+  width: 311px;
+  margin-bottom: 17px;
+}
+
+.cart {
+  width: $siteWight;
+  margin: 96px auto 128px auto;
+  display: flex;
+  gap: 128px;
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: $cardWight;
+
+    &-button {
+      @include flexCenter;
+      width: 225px;
+      height: 50px;
+      border: 1px solid $mainGreyColor;
+      @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+    }
+  }
+
+
+}
+
+.card {
+  height: 306px;
+  width: 652px;
+
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+  display: flex;
+
+  &__image {
+    img {
+      max-width:100%;
+      max-height:100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    margin: 22px 22px 0 31px;
+
+    &-close {
+      position: relative;
+      left: 320px;
+    }
+    &-string {
+      @include fontSets(#575757, $mainFont, 400, 22px);
+      display: flex;
+      gap: 6px;
+    }
+    &-name {
+      @include fontSets($mainBlackColor, $mainFont, 400, 24px);
+
+    }
+    &-params {
+      margin-top: 42px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    &-price {
+      @include fontSets($mainPinkColor, $mainFont, 400, 22px);
+    }
+    &-quantity {
+      border: 1px solid $mainGreyColor;
+      @include fontSets($mainGreyColor, $mainFont, 400, 18px);
+
+      width: 44px;
+      height: 25px;
+      margin-left: 24px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+.controllers {
+
+  &__shipping {
+    width: 360px;
+    height: 272px;
+    margin-bottom: 80px;
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-input {
+      width: 360px;
+      height: 45px;
+      border: 1px solid $mainGreyColor;
+      padding-left: 17px;
+      @include fontSets($mainGreyColor, $mainFont, 300, 13px);
+
+    }
+    &-submit {
+      width: 101px;
+      height: 35px;
+      border: 1px solid $mainGreyColor;
+      @include fontSets($mainGreyColor, $mainFont, 300, 11px);
+      background: white;
+    }
+  }
+
+  &__checkout {
+    width: 314px;
+    height: 133px;
+    background: #F5F3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 39px 34px 42px 34px;
+
+    &-subtotal {
+      margin-bottom: 12px;
+      @include fontSets($mainBlackColor, $mainFont, 400, 11px)
+    }
+    &-grandtotal {
+      margin-bottom: 21px;
+      @include fontSets($mainBlackColor, $mainFont, 300, 16px);
+      &-price {
+        @include fontSets($mainPinkColor, $mainFont, 300, 16px);
+      }
+    }
+    &-button {
+      width: 314px;
+      height: 50px;
+      background: $mainPinkColor;
+      @include fontSets(white, $mainFont, 300, 16px);
+      @include flexCenter;
+    }
+  }
+
+}
+
