@@ -1,6 +1,8 @@
 @import "vars";
 @import "mixins";
 
+
+
 .registration {
   width: $siteWight;
   margin: 64px auto 96px auto;
@@ -81,5 +83,38 @@
   &__ul li{
     line-height: 46px;
     padding-left: 23px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .registration {
+    gap: 44px;
+    margin: 64px 16px 96px 16px;
+  }
+  .reg-perks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-perks {
+    &__headline {
+      @include fontSets($mainBlackColor, $mainFont, 300, 16px)
+    }
+    &__text {
+      @include fontSets($mainBlackColor, $mainFont, 300, 16px)
+    }
+    &__ul {
+      @include fontSets($mainBlackColor, $mainFont, 300, 16px);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .registration {
+    flex-direction: column;
   }
 }

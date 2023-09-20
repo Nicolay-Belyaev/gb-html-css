@@ -506,6 +506,43 @@ summary::-webkit-details-marker {
   padding-left: 23px;
 }
 
+@media (max-width: 1024px) {
+  .registration {
+    gap: 44px;
+    margin: 64px 16px 96px 16px;
+  }
+  .reg-perks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .reg-perks__headline {
+    color: #222222;
+    font-family: Lato, serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .reg-perks__text {
+    color: #222222;
+    font-family: Lato, serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .reg-perks__ul {
+    color: #222222;
+    font-family: Lato, serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+@media (max-width: 375px) {
+  .registration {
+    flex-direction: column;
+  }
+}
 body {
   margin: 0;
   padding: 0;

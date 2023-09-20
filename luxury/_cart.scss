@@ -3,8 +3,6 @@
 
 $cardWight: 652px;
 
-
-
 .solid {
   border-top: 3px solid #E2E2E2;
   width: 311px;
@@ -36,6 +34,8 @@ $cardWight: 652px;
       @include fontSets($mainGreyColor, $mainFont, 300, 14px);
     }
   }
+
+
 
 
 }
