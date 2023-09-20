@@ -1,3 +1,5 @@
+@import "vars";
+
 @mixin fontSets($color, $family, $weight, $size) {
   color: $color;
   font-family: $family;
@@ -16,4 +18,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin textInputs {
+  width: 360px;
+  height: 45px;
+  border: 1px solid $mainGreyColor;
+  padding-left: 17px;
+  @include fontSets($mainGreyColor, $mainFont, 300, 13px);
 }

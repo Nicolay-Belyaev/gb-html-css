@@ -3,9 +3,7 @@
 
 $cardWight: 652px;
 
-.address {
-  @include fontSets($mainBlackColor, $mainFont, 300, 16px);
-}
+
 
 .solid {
   border-top: 3px solid #E2E2E2;
@@ -97,8 +95,6 @@ $cardWight: 652px;
   }
 }
 
-
-
 .controllers {
 
   &__shipping {
@@ -112,12 +108,7 @@ $cardWight: 652px;
       gap: 20px;
     }
     &-input {
-      width: 360px;
-      height: 45px;
-      border: 1px solid $mainGreyColor;
-      padding-left: 17px;
-      @include fontSets($mainGreyColor, $mainFont, 300, 13px);
-
+      @include textInputs;
     }
     &-submit {
       width: 101px;

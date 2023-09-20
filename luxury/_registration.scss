@@ -1,0 +1,85 @@
+@import "vars";
+@import "mixins";
+
+.registration {
+  width: $siteWight;
+  margin: 64px auto 96px auto;
+  display: flex;
+  gap: 128px;
+}
+
+.reg-container {
+  display: flex;
+  flex-direction: column;
+
+  .reg-form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-radio {
+      margin: 14px 0 14px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      @include fontSets($mainBlackColor, $mainFont, 300, 11px);
+    }
+    &__input-radio {
+      zoom: 1.5;
+    }
+    &__input-label {
+      zoom: 1;
+      top: 2px;
+      position: relative;
+    }
+
+    &__input-text {
+     @include textInputs;
+    }
+
+    &__undertext {
+      position: relative;
+      bottom: 5px;
+      margin-bottom: 14px;
+      @include fontSets($mainGreyColor, $mainFont, 300, 13px)
+    }
+    &__submit {
+      width: 167px;
+      height: 50px;
+      background: $mainPinkColor;
+      color: white;
+      border: 1px solid white;
+      text-align: left;
+      padding-left: 29px;
+    }
+    &__arrow {
+      position: relative;
+      bottom: 50px;
+      left: 120px;
+    }
+  }
+}
+
+.reg-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__headline {
+    @include fontSets($mainBlackColor, $mainFont, 300, 24px)
+  }
+  &__text {
+    @include fontSets($mainBlackColor, $mainFont, 300, 24px)
+  }
+  &__ul {
+    @include fontSets($mainBlackColor, $mainFont, 300, 24px);
+    list-style-image: url("img/registration/list-marker.svg");
+    margin: 0;
+    padding-left: 26px;
+  }
+  &__ul li{
+    line-height: 46px;
+    padding-left: 23px;
+  }
+}

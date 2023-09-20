@@ -242,13 +242,6 @@ summary::-webkit-details-marker {
   font-size: 14px;
 }
 
-.address {
-  color: #222222;
-  font-family: Lato, serif;
-  font-weight: 300;
-  font-size: 16px;
-}
-
 .solid {
   border-top: 3px solid #E2E2E2;
   width: 311px;
@@ -413,9 +406,116 @@ summary::-webkit-details-marker {
   align-items: center;
 }
 
+.registration {
+  width: 1140px;
+  margin: 64px auto 96px auto;
+  display: flex;
+  gap: 128px;
+}
+
+.reg-container {
+  display: flex;
+  flex-direction: column;
+}
+.reg-container .reg-form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reg-container .reg-form-radio {
+  margin: 14px 0 14px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 11px;
+}
+.reg-container .reg-form__input-radio {
+  zoom: 1.5;
+}
+.reg-container .reg-form__input-label {
+  zoom: 1;
+  top: 2px;
+  position: relative;
+}
+.reg-container .reg-form__input-text {
+  width: 360px;
+  height: 45px;
+  border: 1px solid #8c8c8c;
+  padding-left: 17px;
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 13px;
+}
+.reg-container .reg-form__undertext {
+  position: relative;
+  bottom: 5px;
+  margin-bottom: 14px;
+  color: #8c8c8c;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 13px;
+}
+.reg-container .reg-form__submit {
+  width: 167px;
+  height: 50px;
+  background: #F16D7F;
+  color: white;
+  border: 1px solid white;
+  text-align: left;
+  padding-left: 29px;
+}
+.reg-container .reg-form__arrow {
+  position: relative;
+  bottom: 50px;
+  left: 120px;
+}
+
+.reg-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reg-perks__headline {
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+.reg-perks__text {
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+.reg-perks__ul {
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 24px;
+  list-style-image: url("img/registration/list-marker.svg");
+  margin: 0;
+  padding-left: 26px;
+}
+.reg-perks__ul li {
+  line-height: 46px;
+  padding-left: 23px;
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+
+.form-spans {
+  color: #222222;
+  font-family: Lato, serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 input::placeholder {
