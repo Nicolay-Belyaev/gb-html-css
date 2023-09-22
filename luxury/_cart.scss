@@ -34,10 +34,6 @@ $cardWight: 652px;
       @include fontSets($mainGreyColor, $mainFont, 300, 14px);
     }
   }
-
-
-
-
 }
 
 .card {
@@ -150,3 +146,41 @@ $cardWight: 652px;
 
 }
 
+@media (max-width: 1024px) {
+  .cart {
+    width: 734px;
+    flex-direction: column;
+    align-items: center;
+    &__controllers {
+      display: flex;
+    }
+    &__buttons {
+      width: 734px;
+      justify-content: space-evenly;
+    }
+  }
+  .card {
+    width: 734px;
+    &__description-close {
+      left: 400px;
+    }
+  }
+  .controllers {
+    &__shipping-input {
+      width: 331px;
+    }
+    &__checkout {
+      width: 286px;
+      position: relative;
+      top: 38px;
+    }
+    &__checkout-button {
+      width: 273px;
+    }
+  }
+  .solid {
+    width: 270px;
+    position: relative;
+    left: 5px;
+  }
+}

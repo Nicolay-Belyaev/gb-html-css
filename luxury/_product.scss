@@ -66,3 +66,27 @@
   gap: 23px;
   @include fontSets(#6F6E6E, $mainFont, 400, 14px);
 }
+
+@media (max-width: 1024px) {
+  .description {
+    width: 767px;
+  }
+}
+@media (max-width: 425px) {
+  .description {
+    width: 424px;
+    &__maintext {
+      width: 326px;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .description {
+    width: 374px;
+  }
+  #product__sort {
+    gap: 14px;
+  }
+}
+

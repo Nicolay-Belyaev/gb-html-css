@@ -101,6 +101,7 @@
 
 @media (max-width: 768px) {
   .reg-perks {
+    width: 337px;
     &__headline {
       @include fontSets($mainBlackColor, $mainFont, 300, 16px)
     }
@@ -113,8 +114,35 @@
   }
 }
 
+@media (max-width: 425px) {
+  .registration {
+    flex-direction: column;
+  }
+  .reg-container {
+    .reg-form {
+      &__input-text {
+        width: 375px;
+      }
+    }
+  }
+}
+
+@media (max-width: $siteWight) {
+  .registration {
+    width: auto;
+  }
+}
+
 @media (max-width: 375px) {
   .registration {
     flex-direction: column;
   }
+  .reg-container {
+    .reg-form {
+      &__input-text {
+        width: 323px;
+      }
+    }
+  }
 }
+

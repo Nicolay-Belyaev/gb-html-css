@@ -1,0 +1,252 @@
+@import "vars";
+@import "mixins";
+
+.signboard {
+  background: #F1E4E6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    position: relative;
+    right: 235px;
+  }
+  &__right-text {
+    width: 377px;
+    height: 93px;
+
+    border-left: 12px solid $mainPinkColor;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+
+
+    position: relative;
+    right: 150px;
+    }
+
+  &__right-text-firstline {
+    @include fontSets($mainBlackColor, $mainFont, 900, 48px);
+  }
+  &__right-text-regular {
+    @include fontSets($mainBlackColor, $mainFont, 700, 32px);
+  }
+  &__right-text-pink {
+    @include fontSets($mainPinkColor, $mainFont, 700, 32px);
+  }
+}
+
+.catalog {
+  margin-bottom: 96px;
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  width: $siteWight;
+
+  grid-template-areas:
+        "A B C"
+        "D D D";
+
+  &__square-1 {
+    @include gridSets(A, 360px, 260px);
+  }
+  &__square-2 {
+    @include gridSets(B, 360px, 260px);
+  }
+  &__square-3 {
+    @include gridSets(C, 360px, 260px);
+  }
+  &__rectangle {
+    @include gridSets(D, $siteWight, 180px);
+  }
+  &__rectangle-text {
+    top: -110px;
+  }
+  &__image {
+    opacity: 0.5;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    bottom: 160px;
+  }
+  &__text-first-line {
+    @include fontSets(white, $mainFont, 400, 16px);
+  }
+  &__text-second-line {
+    @include fontSets($mainPinkColor, $mainFont, 700, 24px);
+  }
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 48px;
+
+    &__headline {
+      @include fontSets($mainBlackColor, $mainFont, 400, 30px);
+    }
+    &__text {
+      @include fontSets($mainGreyColor, $mainFont, 400, 14px);
+    }
+}
+
+.container {
+  padding: 65px 230px 60px 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .signboard {
+    &__img {
+      right: 120px;
+    }
+    &__right-text {
+      height: 90px;
+      right: 210px;
+      width: 237px;
+      display: flex;
+      justify-content: left;
+      &-firstline {
+        @include fontSets($mainBlackColor, $mainFont, 900, 44px);
+      }
+      &_regular {
+        @include fontSets($mainBlackColor, $mainFont, 700, 24px);
+      }
+      &_pink {
+        @include fontSets($mainPinkColor, $mainFont, 700, 24px);
+      }
+    }
+  }
+  .catalog {
+    width: 750px;
+    column-gap: 19px;
+    row-gap: 19px;
+    &__square-1 {
+      @include gridSets(A, 231px, 167px);
+    }
+    &__square-2 {
+      @include gridSets(B, 231px, 167px);
+    }
+    &__square-3 {
+      @include gridSets(C, 231px, 167px);
+    }
+    &__rectangle {
+      @include gridSets(D, $siteWight, 180px);
+    }
+    &__rectangle {
+      width: 744px;
+      height: 116px;
+    }
+    &__image {
+      width: 231px;
+      height: 167px;
+    }
+    &__text {
+      bottom: 110px;
+    }
+    &__rectangle-image {
+      width: 744px;
+      height: 116px;
+    }
+    &__rectangle-text {
+      top: -85px;
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  .signboard {
+    height: 363px;
+    &__img {
+      zoom: 0.47;
+    }
+    &__right-text {
+      right: 60px;
+      height: 79px;
+    }
+    &__right-text {
+      height: 80px;
+      &-firstline {
+        @include fontSets($mainBlackColor, $mainFont, 900, 44px);
+      }
+      &-regular {
+        @include fontSets($mainBlackColor, $mainFont, 700, 24px);
+      }
+      &-pink {
+        @include fontSets($mainPinkColor, $mainFont, 700, 24px);
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .signboard {
+    @include flexCenter;
+
+    &__right-text {
+      position: static;
+      height: 65px;
+      &-firstline {
+        @include fontSets($mainBlackColor, $mainFont, 900, 38px);
+      }
+      &_regular {
+        @include fontSets($mainBlackColor, $mainFont, 700, 20px);
+      }
+      &_pink {
+        @include fontSets($mainPinkColor, $mainFont, 700, 20px);
+      }
+    }
+    &__img {
+      display: none;
+    }
+  }
+  .catalog {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__square-1 {
+      width: 320px;
+      height: 247px;
+    }
+    &__square-2 {
+      width: 320px;
+      height: 247px;
+    }
+    &__square-3 {
+      width: 320px;
+      height: 247px;
+    }
+    &__image {
+      width: 320px;
+      height: 247px;
+    }
+    &__text {
+      bottom: 150px;
+    }
+    &__rectangle {
+      width: 320px;
+      height: 111px;
+
+      position: relative;
+      overflow: hidden;
+    }
+    &__rectangle-image {
+      width: 744px;
+      height: 111px;
+
+      position: relative;
+      right: 207px;
+    }
+  }
+}

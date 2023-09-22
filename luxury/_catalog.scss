@@ -9,30 +9,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.heading {
-  height: 148px;
-  background: $secondPinkColor;
-  display: flex;
-  justify-content: center;
-
-    &__container {
-      width: $siteWight;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .arrivals {
-      @include fontSets($mainPinkColor, $mainFont, 400, 24px);
-    }
-
-    .selectors {
-      @include fontSets($mainGreyColor, $mainFont, 300, 14px);
-      &__pink {
-        @include fontSets($mainPinkColor, $mainFont, 700, 14px);
-      }
-    }
-}
-
 .filter-sort {
   width: $siteWight;
   margin: 0 auto;
@@ -151,3 +127,8 @@ summary::-webkit-details-marker {
     }
 }
 
+@media (max-width: 1024px) {
+  .filter-sort {
+    width: 736px;
+  }
+}

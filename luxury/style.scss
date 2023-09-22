@@ -4,8 +4,14 @@
 @import "product";
 @import "cart";
 @import "registration";
+@import "index";
+
+//html {
+//  overflow-x: hidden;
+//}
 
 body {
+  //overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -18,13 +24,18 @@ input::placeholder {
   color: black;
 }
 
+.isHidden {
+  display: flex;
+}
+
 .menu {
   background: $mainBlackColor;
   height: 75px;
+  padding: 0 32px 0 32px;
   @include flexCenter;
 
     &__container {
-      width: 1140px;
+      width: $siteWight;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -43,92 +54,41 @@ input::placeholder {
     }
 }
 
-.signboard {
-  background: #F1E4E6;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-    &__img {
-      position: relative;
-      right: 235px;
-    }
-    &__right-text {
-      display: flex;
-      flex-direction: column;
-
-      position: relative;
-      right: 150px;
-    }
-    &__right-text-bold {
-      @include fontSets($mainBlackColor, $mainFont, 900, 48px);
-    }
-    &__right-text-regular {
-      @include fontSets($mainBlackColor, $mainFont, 700, 32px);
-    }
-    &__right-text-pink {
-      @include fontSets($mainPinkColor, $mainFont, 700, 32px);
-    }
-  .stick {
-    height: 93px;
-    position: absolute;
-    right: 392px;
+@media (max-width: 768px) {
+  #cart {
+    display: none;
+  }
+  #profile {
+    display: none;
   }
 }
-
-.container {
-  padding: 65px 230px 60px 230px;
-
+.heading {
+  height: 148px;
+  background: $secondPinkColor;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  justify-content: center;
 
-.catalog {
-  margin-bottom: 96px;
-  display: grid;
-  column-gap: 30px;
-  row-gap: 30px;
-  width: $siteWight;
-
-  grid-template-areas:
-        "A B C"
-        "D D D";
-
-    &__square-1 {
-      @include gridSets(A, 360px, 260px);
-    }
-    &__square-2 {
-      @include gridSets(B, 360px, 260px);
-    }
-    &__square-3 {
-      @include gridSets(C, 360px, 260px);
-    }
-    &__rectangle {
-      @include gridSets(D, $siteWight, 180px);
-    }
-    &__rectangle-text {
-      top: -110px;
-    }
-    &__image {
-      opacity: 0.5;
-    }
-    &__text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  &__container {
+    padding: 0 32px 0 32px;
+    width: $siteWight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 425px) {
       flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+  .arrivals {
+    @include fontSets($mainPinkColor, $mainFont, 400, 24px);
+  }
 
-      position: relative;
-      bottom: 160px;
+  .selectors {
+    @include fontSets($mainGreyColor, $mainFont, 300, 14px);
+    &__pink {
+      @include fontSets($mainPinkColor, $mainFont, 700, 14px);
     }
-    &__text-first-line {
-      @include fontSets(white, $mainFont, 400, 16px);
-    }
-    &__text-second-line {
-      @include fontSets($mainPinkColor, $mainFont, 700, 24px);
-    }
+  }
 }
 
 .products {
@@ -234,6 +194,22 @@ input::placeholder {
       fill: white;
     }
   }
+  @media (max-width: 1024px) {
+    .products__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+  }
+  @media (max-width: 425px) {
+    .products__cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+  }
 }
 
 .footer__features-feature {
@@ -327,6 +303,49 @@ input::placeholder {
       gap: 8px;
     }
   }
+  @media (max-width: 1024px) {
+    .footer {
+      &__features {
+        flex-direction: column;
+        height: 610px;
+      }
+      &__subscribe {
+        flex-direction: column;
+        gap: 25px;
+      }
+      &__copyrights {
+        gap: 540px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .footer {
+      &__features {
+        padding: 0 0 0 0;
+      }
+      &__copyrights {
+        height: 143px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 0 32px 0 32px;
+      }
+      &__subscribe-right {
+        scale: 0.9;
+      }
+      &__subscribe-left {
+        scale: 0.9;
+      }
+    }
+
+  }
+  @media (max-width: 425px) {
+    .footer__copyrights {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+    }
+  }
 }
 
 .subscribe {
@@ -367,6 +386,7 @@ input::placeholder {
   &__button {
     position: relative;
     right: 24px;
+    top: 3px;
     &-text {
       position: absolute;
       top: 17px;
