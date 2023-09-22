@@ -92,7 +92,6 @@ $cardWight: 652px;
 }
 
 .controllers {
-
   &__shipping {
     width: 360px;
     height: 272px;
@@ -114,7 +113,6 @@ $cardWight: 652px;
       background: white;
     }
   }
-
   &__checkout {
     width: 314px;
     height: 133px;
@@ -182,5 +180,79 @@ $cardWight: 652px;
     width: 270px;
     position: relative;
     left: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .cart {
+    margin: 30px auto 96px auto;
+    width: 360px;
+    gap: 48px;
+    &__controllers {
+      flex-direction: column;
+    }
+    &__cards {
+      align-items: center;
+    }
+    &__buttons {
+      width: 360px;
+      &-button {
+        @include fontSets($mainGreyColor, $mainFont, 400, 12px);
+        width: 175px;
+        height: 33px;
+      }
+    }
+  }
+  .controllers {
+    &__checkout {
+      top: -25px;
+    }
+  }
+  .card {
+    width: 358px;
+    height: 188px;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0px 17px 0 17px;
+
+      &-close {
+        position: relative;
+        left: 150px;
+      }
+
+      &-string {
+        @include fontSets(#575757, $mainFont, 400, 14px);
+        display: flex;
+        gap: 6px;
+      }
+
+      &-name {
+        @include fontSets($mainBlackColor, $mainFont, 400, 16px);
+
+      }
+
+      &-params {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      &-price {
+        @include fontSets($mainPinkColor, $mainFont, 400, 14px);
+      }
+
+      &-quantity {
+        border: 1px solid $mainGreyColor;
+        @include fontSets($mainGreyColor, $mainFont, 400, 10px);
+
+        width: 44px;
+        height: 25px;
+        margin-left: 24px;
+        text-align: center;
+      }
+    }
   }
 }

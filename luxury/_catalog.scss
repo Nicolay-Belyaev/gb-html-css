@@ -102,7 +102,7 @@ summary::-webkit-details-marker {
         padding: 9px 0 12px 9px;
         gap: 9px;
         background: #FFF;
-        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
       }
     }
   }
@@ -130,5 +130,26 @@ summary::-webkit-details-marker {
 @media (max-width: 1024px) {
   .filter-sort {
     width: 736px;
+  }
+}
+@media (max-width: 425px) {
+  .filter-sort {
+    width: 360px;
+    display: flex;
+    justify-content: flex-end;
+    .filter {
+      &__details {
+        left: 0;
+      }
+    }
+  }
+
+  #filter {
+    &__textbutton {
+      display: none;
+    }
+    &__svgbutton {
+      scale: 3;
+    }
   }
 }
