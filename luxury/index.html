@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="data.js" defer></script>
-    <script src="productsLoader.js" defer></script>
     <link rel="stylesheet" href="style.css" class="css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" integrity="sha512-rSWTr6dChYCbhpHaT1hg2tf4re2jUxBWTuZbujxKg96+T87KQJriMzBzW5aqcb8jmzBhhNSx4XYGA6/Y+ok1vQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="data.js" defer></script>
+    <script src="cart.js" defer></script>
+    <script src="index.js" defer></script>
     <title>LuxuryStore</title>
 </head>
 <body>
@@ -33,9 +34,7 @@
             <div class="signboard__right-text-firstline">THE&nbsp;BRAND</div>
             <div class="signboard__right-text-secondline">
                 <span class="signboard__right-text-regular">OF&nbsp;LUXERIOUS&nbsp;<span class="signboard__right-text-pink">FASHION</span></span>
-
             </div>
-
         </div>
     </section>
 
@@ -102,6 +101,10 @@
                 <div class="footer__headline">Quality assurance</div>
                 <div class="footer__description">Worldwide delivery on all. Authoritatively morph next-generation innovation with extensive models.</div>
             </div>
+        </div>
+        <div class="footer__cart">
+            <div class="footer__cart_headline">Cart Items</div>
+            <div class="footer__cart_cards"></div>
         </div>
         <div class="footer__subscribe">
             <div class="footer__subscribe-left">

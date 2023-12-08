@@ -1,20 +1,4 @@
-const cartData = [
-    {
-        "img": "img/products/card-1.png",
-        "name": "ELLERY X M'O CAPSULE",
-        "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-        "price": "52$"
-    },
-    {
-        "img": "img/products/card-2.png",
-        "name": "ELLERY X M'O CAPSULE",
-        "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-        "price": "52$"
-    }
-]
-
-
-const cartProductHTMLGenerator = ({img, name, price}) => {
+const cartProductHTMLGenerator = ({id, img, name, price}) => {
     const wrapper = document.createElement("div");
 
     const imageDiv = document.createElement("div");
@@ -23,7 +7,7 @@ const cartProductHTMLGenerator = ({img, name, price}) => {
     const descriptionDiv = document.createElement("div");
     const closeButton = document.createElement("img");
     const productName = document.createElement("span");
-    const title = document.createElement("span");
+    const productTitle = document.createElement("span");
 
     const paramsWrapper = document.createElement("div");
     const priceOuterSpan = document.createElement("span");
@@ -39,7 +23,7 @@ const cartProductHTMLGenerator = ({img, name, price}) => {
     closeButton.className = "card__description-close";
     closeButton.className = "card__description-close";
     productName.className = "card__description-string card__description-name";
-    title.className = "card__description-string card__description-name";
+    productTitle.className = "card__description-string card__description-name";
     paramsWrapper.className = "card__description-params";
     priceOuterSpan.className = "card__description-string"
     priceInnerSpan.className = "card__description-price";
@@ -53,15 +37,19 @@ const cartProductHTMLGenerator = ({img, name, price}) => {
     color.innerText = "Color: Red";
     quantityOuterSpan.textContent = "Quantity:"
     closeButton.src = "img/cart/close.svg";
+    closeButton.setAttribute("data-id", id);
 
     image.src = img;
-    productName.textContent = name;
     priceInnerSpan.textContent = price;
     quantityInnerInput.value = "2"; // так-то будет приходить с бэка, но во входных данных нету, захардкодим.
+    const splittedName = name.split(" ");
+    productTitle.innerText = splittedName.splice(-1, 1)[0];
+    productName.innerText = splittedName.join(" ");
+    closeButton.addEventListener("click", () => removeFromCart(closeButton.dataset.id))
 
     wrapper.append(imageDiv, descriptionDiv);
         imageDiv.append(image);
-        descriptionDiv.append(closeButton, productName, title, paramsWrapper);
+        descriptionDiv.append(closeButton, productName, productTitle, paramsWrapper);
         paramsWrapper.append(priceOuterSpan, color, size, quantityOuterSpan);
             priceOuterSpan.append(priceInnerSpan);
             quantityOuterSpan.append(quantityInnerInput);
@@ -70,7 +58,23 @@ const cartProductHTMLGenerator = ({img, name, price}) => {
 }
 
 const cartRenderer = (data, targetDiv) => {
-    data.forEach(product => targetDiv.append(cartProductHTMLGenerator(product)));
+    const indexDiv = document.querySelector(".footer__cart");
+    if (cartData.length === 0) {
+        indexDiv.style.display = "none";
+        return;
+    }
+    indexDiv.style.display = "flex";
+    data.forEach(product => targetDiv.prepend(cartProductHTMLGenerator(product)));
+}
+
+const removeFromCart = (productID) => {
+    for (let i = 0; i < cartData.length; i++) {
+        if (cartData[i].id === productID) {
+            cartData.splice(i, 1);
+            break;
+        }
+        cartRenderer(cartData, document.querySelector(".cart__cards"));
+    }
 }
 
 cartRenderer(cartData, document.querySelector(".cart__cards"));

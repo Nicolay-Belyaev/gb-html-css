@@ -1205,6 +1205,27 @@ input::placeholder {
   gap: 1rem;
 }
 
+.footer__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 65px 0 60px 0;
+}
+.footer__cart_headline {
+  color: #222;
+  font-family: Lato, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__cart_cards {
+  display: flex;
+  flex-direction: column;
+  width: 1140px;
+  gap: 30px;
+}
 .footer__features {
   display: flex;
   justify-content: center;

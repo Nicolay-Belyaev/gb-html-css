@@ -56,3 +56,4 @@ const productsPlacer = (data) => {
 }
 
 productsPlacer(products);
+cartRenderer(cartData, document.querySelector(".footer__cart_cards"));

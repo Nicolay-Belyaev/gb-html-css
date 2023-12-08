@@ -195,6 +195,28 @@ input::placeholder {
 }
 
 .footer {
+  &__cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 65px 0 60px 0;
+
+    &_headline {
+      color: #222;
+      font-family: Lato, serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &_cards {
+      display: flex;
+      flex-direction: column;
+      width: 1140px;
+      gap: 30px;
+    }
+  }
   &__features {
     @include flexCenter;
 
