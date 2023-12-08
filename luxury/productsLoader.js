@@ -28,10 +28,10 @@ const productHTMLGenerator = (product) => {
     cardDescription.className = "products__cards-card-description";
     cardPrice.className = "products__cards-card-price";
 
-    productImg.src=`${product.img}`;
-    cardName.innerText = `${product.name}`;
-    cardDescription.innerText = `${product.description}`;
-    cardPrice.innerText = `${product.price}`;
+    productImg.src = product.img;
+    cardName.innerText = product.name;
+    cardDescription.innerText = product.description;
+    cardPrice.innerText = product.price;
 
     card.append(imageDiv, cardText);
         imageDiv.append(hover,productImg)

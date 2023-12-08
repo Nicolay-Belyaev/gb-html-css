@@ -305,6 +305,7 @@ summary::-webkit-details-marker {
   margin: 22px 22px 40px 31px;
 }
 .card__description-close {
+  width: 18px;
   position: relative;
   left: 320px;
 }
