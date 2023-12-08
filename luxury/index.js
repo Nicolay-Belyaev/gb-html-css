@@ -1,3 +1,12 @@
+const addToCart = (productID) => {
+    products.forEach(product => {
+        if (product.id == productID) {
+            cartData.push(product);
+        }
+    })
+    cartRenderer(cartData);
+}
+
 // чистая функция делает из object/JSON верстку
 const productHTMLGenerator = (product) => {
     // в этот момент начинаешь любить JSX...
@@ -32,6 +41,12 @@ const productHTMLGenerator = (product) => {
     cardName.innerText = product.name;
     cardDescription.innerText = product.description;
     cardPrice.innerText = product.price;
+
+    hoverButton.setAttribute("id", product.id);
+    hoverButton.addEventListener("click", () => {
+        addToCart(hoverButton.getAttribute("id"));
+        }
+    )
 
     card.append(imageDiv, cardText);
         imageDiv.append(hover,productImg)

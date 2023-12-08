@@ -43,7 +43,7 @@ const products = [
     },
 ]
 
-const cartData = [
+let cartData = [
     {
         "id": 1,
         "img": "img/products/card-1.png",

@@ -45,7 +45,9 @@ const cartProductHTMLGenerator = ({id, img, name, price}) => {
     const splittedName = name.split(" ");
     productTitle.innerText = splittedName.splice(-1, 1)[0];
     productName.innerText = splittedName.join(" ");
-    closeButton.addEventListener("click", () => removeFromCart(closeButton.dataset.id))
+    closeButton.addEventListener("click", () => {
+        removeFromCart(closeButton.dataset.id)
+    })
 
     wrapper.append(imageDiv, descriptionDiv);
         imageDiv.append(image);
@@ -57,24 +59,23 @@ const cartProductHTMLGenerator = ({id, img, name, price}) => {
     return wrapper;
 }
 
-const cartRenderer = (data, targetDiv) => {
+const cartRenderer = (data) => {
     const indexDiv = document.querySelector(".footer__cart");
     if (cartData.length === 0) {
         indexDiv.style.display = "none";
         return;
     }
     indexDiv.style.display = "flex";
-    data.forEach(product => targetDiv.prepend(cartProductHTMLGenerator(product)));
+    indexDiv.innerHTML = "";
+    data.forEach(product => indexDiv.prepend(cartProductHTMLGenerator(product)));
 }
 
 const removeFromCart = (productID) => {
     for (let i = 0; i < cartData.length; i++) {
-        if (cartData[i].id === productID) {
+        if (cartData[i].id == productID) {
             cartData.splice(i, 1);
             break;
         }
-        cartRenderer(cartData, document.querySelector(".cart__cards"));
     }
+    cartRenderer(cartData, document.querySelector(".cart__cards"));
 }
-
-cartRenderer(cartData, document.querySelector(".cart__cards"));
