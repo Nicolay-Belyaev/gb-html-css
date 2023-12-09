@@ -60,14 +60,17 @@ const cartProductHTMLGenerator = ({id, img, name, price}) => {
 }
 
 const cartRenderer = (data) => {
-    const indexDiv = document.querySelector(".footer__cart");
+    const cartDiv = document.querySelector(".footer__cart");
+    const cartHeadline = document.querySelector(".footer__cart_headline")
     if (cartData.length === 0) {
-        indexDiv.style.display = "none";
+        cartHeadline.style.display = "none";
+        cartDiv.style.display = "none";
         return;
     }
-    indexDiv.style.display = "flex";
-    indexDiv.innerHTML = "";
-    data.forEach(product => indexDiv.prepend(cartProductHTMLGenerator(product)));
+    cartDiv.style.display = "flex";
+    cartHeadline.style.display = "flex";
+    cartDiv.innerHTML = "";
+    data.forEach(product => cartDiv.prepend(cartProductHTMLGenerator(product)));
 }
 
 const removeFromCart = (productID) => {
