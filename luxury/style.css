@@ -1208,23 +1208,17 @@ input::placeholder {
 .footer__cart {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
-  margin: 65px 0 60px 0;
+  width: 1140px;
+  margin: 65px auto 60px auto;
 }
 .footer__cart_headline {
-  color: #222;
+  color: black;
   font-family: Lato, serif;
-  font-size: 30px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-}
-.footer__cart_cards {
-  display: flex;
-  flex-direction: column;
-  width: 1140px;
-  gap: 30px;
+  font-size: 30px;
+  justify-content: center;
+  margin-top: 60px;
 }
 .footer__features {
   display: flex;

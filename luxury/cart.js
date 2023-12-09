@@ -41,7 +41,7 @@ const cartProductHTMLGenerator = ({id, img, name, price}) => {
 
     image.src = img;
     priceInnerSpan.textContent = price;
-    quantityInnerInput.value = "2"; // так-то будет приходить с бэка, но во входных данных нету, захардкодим.
+    quantityInnerInput.value = "1";
     const splittedName = name.split(" ");
     productTitle.innerText = splittedName.splice(-1, 1)[0];
     productName.innerText = splittedName.join(" ");
